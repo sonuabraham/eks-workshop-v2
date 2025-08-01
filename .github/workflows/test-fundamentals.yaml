@@ -1,0 +1,26 @@
+name: Test - Fundamentals
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * 1"
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  test-module:
+    strategy:
+      fail-fast: false
+      matrix:
+        module:
+          - fundamentals/managed-node-groups**
+          - fundamentals/fargate**
+          - fundamentals/exposing**
+          - fundamentals/storage/{efs,ebs,mountpoint}**
+          - fundamentals/storage/{fsx}**
+    uses: ./.github/workflows/module-test.yaml
+    with:
+      glob: ${{ matrix.module }}
+    secrets: inherit

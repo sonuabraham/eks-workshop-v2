@@ -1,0 +1,1 @@
+export KUBECTL_VERSION='v1.31.3'

@@ -1,0 +1,55 @@
+# MacOS
+.DS_Store
+
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform lockfile
+.terraform.lock.hcl
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*.tfplan
+
+# Crash log files
+crash.log
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+vendor
+builds
+
+public
+resources
+
+env
+
+.vscode
+*.zip
+
+cdk.out
+
+.envrc
+node_modules
+test-output
+
+terraform-resources
+
+package-lock.json
+
+# Yarn files
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions# Devenv
+.devenv*
+devenv.local.nix
+
+# direnv
+.direnv

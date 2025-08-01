@@ -1,0 +1,9 @@
+[build]
+  publish = "website/build"
+
+  command = "bash website/netlify-build.sh"
+
+  environment = { NODE_VERSION = "18.13.0" }
+
+[context.production.environment]
+  ENABLE_INDEX = "1"
